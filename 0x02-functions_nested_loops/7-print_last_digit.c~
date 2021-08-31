@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+ * print_last_digit - prints last value
+ * @n: character to check
+ * Return: Always 0 (Success)
+ */
+
+int print_last_digit(int n)
+{
+char t;
+t = n % 10;
+_putchar(t);
+return (0);
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+/**
+ *_strcat - concatenates two strings
+ *@dest: array to overwright
+ *@src: array to be appended
+ *Return: string dest
+ */
+
+char *_strcat(char *dest, char *src)
+{
+for (int i; i < 5; i++)
+{
+dest[6 + i] = src[i];
+}
+dest[12] = '\0';
+return(dest);
+}

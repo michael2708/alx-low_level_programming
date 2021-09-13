@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *memset - function that fills memory with a constant byte
+ *_memset - function that fills memory with a constant byte
  *@s: pointer to array
  *@b: constant byte
  *@n: nth memory area
@@ -10,8 +10,9 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int i;
-for (i = 0; i < n; i++)
+int limit = n;
+int i;
+for (i = 0; i < limit; i++)
 {
 s[i] = b;
 }

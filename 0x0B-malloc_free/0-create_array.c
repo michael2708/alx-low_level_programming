@@ -17,6 +17,10 @@ if (s == 0)
 return (NULL);
 }
 str = malloc(sizeof(char) * s);
+if (str == NULL)
+{
+return (NULL);
+}
 for (i = 0; i <= s; i++)
 {
 *(str + i) = c;

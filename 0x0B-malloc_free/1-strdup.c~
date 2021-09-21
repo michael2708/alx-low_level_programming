@@ -1,0 +1,35 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * _strdup - function that returns a pointer
+ * to a newly allocated space in memory
+ * @str: array
+ * Return: duplicate array
+ */
+char *_strdup(char *str)
+{
+char *dup;
+int i = 0;
+int j;
+int count = 0;
+if (str == NULL)
+{
+return (NULL);
+}
+while (*(str + i))
+{
+i++;
+count++;
+}
+dup = malloc(sizeof(char) * count);
+if (dup == NULL)
+{
+return (NULL);
+}
+for (j = 0; j <= count; i++)
+{
+*(dup + j) = *(str + j);
+}
+return (dup);
+}

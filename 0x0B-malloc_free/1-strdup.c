@@ -21,12 +21,13 @@ while (*(str + i))
 i++;
 count++;
 }
+count++;
 dup = malloc(sizeof(char) * count);
 if (dup == NULL)
 {
 return (NULL);
 }
-for (i = 0; i <= count; i++)
+for (i = 0; i < count; i++)
 {
 *(dup + i) = *(str + i);
 }

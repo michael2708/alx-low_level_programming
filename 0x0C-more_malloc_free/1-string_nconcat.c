@@ -38,7 +38,7 @@ if (s2 == NULL)
 {
 s2 = "";
 }
-if (num < 0) 
+if (num < 0)
 {
 return (NULL);
 }
@@ -46,7 +46,7 @@ if (num >= _strlen(s2))
 {
 num = _strlen(s2);
 }
-len = _strlen(s1) + num + 1; 
+len = _strlen(s1) + num + 1;
 ptr = malloc(sizeof(*ptr) * len);
 if (ptr == NULL)
 {
@@ -62,3 +62,4 @@ ptr[i + j] = s2[j];
 }
 ptr[i + j] = '\0';
 return (ptr);
+}

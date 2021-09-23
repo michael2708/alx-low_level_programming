@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * _strlen - calculate and return string length
@@ -9,26 +9,27 @@
 
 int _strlen(char *string)
 {
-int i = 0;
-while (string[i] != '\0')
+int i;
+for (i = 0; string[i] != '\0'; i++)
 {
-i++;
+;
 }
 return (i);
 }
 
 /**
- * string_nconcat - function that concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: size of first string
- * Return: array
+ * string_nconcat - concatenate s1 and n bytes of s2; return ptr to string
+ * @s1: string 1
+ * @s2: string 2
+ * @n: n bytes to concat from string 2
+ * Return: pointer to concatenated string
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-char *tre;
-int i, j, limit, len;
-limit = n;
+char *ptr;
+int num, len, i, j;
+num = n;
 if (s1 == NULL)
 {
 s1 = "";
@@ -37,28 +38,27 @@ if (s2 == NULL)
 {
 s2 = "";
 }
-if (limit < 0)
+if (num < 0) 
 {
 return (NULL);
 }
-if (limit >= _strlen(s2))
+if (num >= _strlen(s2))
 {
-limit = _strlen(s2);
+num = _strlen(s2);
 }
-len = _strlen(s1) + limit + 1;
-tre = malloc(sizeof(*tre) * len);
-if (tre == NULL)
+len = _strlen(s1) + num + 1; 
+ptr = malloc(sizeof(*ptr) * len);
+if (ptr == NULL)
 {
 return (NULL);
 }
 for (i = 0; s1[i] != '\0'; i++)
 {
-tre[i] = s1[i];
+ptr[i] = s1[i];
 }
-for (j = 0; j < limit; j++)
+for (j = 0; j < num; j++)
 {
-tre[i + j] = s2[j];
+ptr[i + j] = s2[j];
 }
-tre[i + j] = '\0';
-return (tre);
-}
+ptr[i + j] = '\0';
+return (ptr);

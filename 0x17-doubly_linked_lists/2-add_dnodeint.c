@@ -17,7 +17,8 @@ if (new == NULL)
 return (NULL);
 }
 new->n = s;
-if (*head == NULL){
+if (*head == NULL)
+{
 *head = new;
 new->next = NULL;
 new->prev = NULL;

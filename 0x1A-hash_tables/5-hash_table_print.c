@@ -25,5 +25,5 @@ node = node->next;
 }
 idx++;
 }
-printf("}");
+printf("}\n");
 }
